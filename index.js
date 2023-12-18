@@ -10,8 +10,8 @@ app.post("/api/send", jsonParser, constrollers.sendMessageToKafka);
 
 // consume from topic "test-topic"
 const kafkaConfig = new KafkaConfig();
-kafkaConfig.consume("my-topic", (value) => {
-  console.log("📨 Receive message: ", value);
+kafkaConfig.consume("topic-1", (value) => {
+  console.log("Message recieved: ", value);
 });
 
 app.listen(8080, () => {

@@ -3,7 +3,7 @@ import { Kafka } from "kafkajs";
 class KafkaConfig {
   constructor() {
     this.kafka = new Kafka({
-      clientId: "nodejs-kafka",
+      clientId: "kafka-node",
       brokers: ["localhost:9093"],
     });
     this.producer = this.kafka.producer();
